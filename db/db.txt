@@ -1,0 +1,46 @@
+Entidades de la base de datos:
+
+	- Usuarios
+	- Grupos
+	- Foros
+	- Temas
+	- Mensajes
+	
+
+Tabla usuarios:
+
+	- id_usuario: int(11) | PK | NOT NULL
+	- nombre_usuario: varchar(255) | NOT NULL
+	- grupo: int(11) | FK | NOT NULL
+	- contrasena: varchar(255) | NOT NULL
+	- email: varchar(255)
+	- avatar: varchar(255)
+	
+Tabla grupos:
+
+	- id_grupo: int(11) | PK | NOT NULL
+	- nombre_grupo: varchar(255) | NOT NULL
+	
+Tabla foros:
+
+	- id_foro: int(11) | PK | NOT NULL
+	- nombre_foro: varchar(255) | NOT NULL
+	- descripcion_foro: varchar(255)
+	
+Tabla temas:
+
+	- id_tema: int(11) | PK | NOT NULL
+	- foro: int(11) | FK | NOT NULL
+	- nombre_tema: varchar(11) | NOT NULL
+	- descripcion: varchar(11)
+	- autor: int(11) | FK | NOT NULL
+	- fecha_creacion: timestamp | NOT NULL
+	
+Tabla mensajes:
+
+	- id_mensaje: int(11) | FK | NOT NULL
+	- tema: int(11) | FK | NOT NULL
+	- foro: int(11) |FK | NOT NULL
+	- autor: int(11) | FK | NOT NULL
+	- texto: mediumtext | NOT NULL
+	- fecha_creacion: timestamp | NOT NULL
