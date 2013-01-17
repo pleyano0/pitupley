@@ -4,8 +4,7 @@ Entidades de la base de datos:
 	- Grupos
 	- Foros
 	- Temas
-	- Mensajes
-	
+	- Mensajes	
 
 Tabla usuarios:
 
